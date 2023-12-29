@@ -17,6 +17,9 @@ nav {
 .nav-links {
     display: none;
 }
+.nav-links-laptop {
+    display: none;
+}
 .nav-links.active {
     background-color: white;
     display: flex;
@@ -25,8 +28,8 @@ nav {
     width: 65%;
     position: fixed;
     right: 0;
-    height: 832px;
-    box-shadow: -160px 0px 0px 0px rgba(0, 0, 26, 0.5);
+    height: 100%;
+    box-shadow: -200px 0px 0px 0px rgba(0, 0, 26, 0.5);
 
 }
 .nav-links > a {
@@ -51,7 +54,7 @@ section {
 .head-image > img {
     width: 100%;
 }
-.future > h1 {
+.header > h1 {
     color: hsl(240, 100%, 5%);
     margin: 1rem 0;
     font-size: 2.5rem;
@@ -62,7 +65,7 @@ section {
     margin: 0 0 1rem 0;
     font-size: 0.938rem;
 }
-.future > a {
+.p-wrapper > a {
     text-decoration: none;
 }
 .read-more {
@@ -149,4 +152,93 @@ section {
     font-size: 0.938rem;
     color: hsl(236, 13%, 42%);
     line-height: 1.5rem;
+}
+.img-desktop {
+    display: none;
+}
+@media only screen and (min-width: 600px) {
+
+    .hamburger-menu {
+        display: none;
+    }
+    .nav-links-laptop {
+        display: flex;
+    }
+    .nav-links-laptop > a {
+        text-decoration: none;
+        margin: 0 1.5rem;
+        color: hsl(240, 100%, 5%);
+    }
+    .nav-links-laptop > a:hover {
+        color: hsl(5, 85%, 63%);
+    }
+}
+@media only screen and (min-width:1024px) {
+
+    .grid-wrapper {
+        display: grid; 
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    .img-desktop {
+        display: block;
+    }
+    .img-mobile {
+        display: none;
+    }
+    .head-image {
+        grid-row-start: 1;
+        grid-column-start: 1;
+     
+        grid-row-end: 2;
+        grid-column-end: 3;
+    }
+    #new {
+        grid-row-start: 1;
+        grid-column-start: 3;
+     
+        grid-row-end: 3;
+        grid-column-end: 4;
+        margin-top: 0;
+        max-height: 550px;
+    }
+    .header {
+        width: 100%;
+    }
+    .header > h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .p-wrapper {
+        width: 100%;
+    }
+    .future {
+        display: flex;
+        grid-row-start: 2;
+        grid-column-start: 1;
+     
+        grid-row-end: 3;
+        grid-column-end: 3;
+    }
+    .p-wrapper > p {
+        line-height: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .bottom {
+        margin-top: 0;
+        display: flex;
+    }
+    .column {
+        margin-right: 1rem;
+    }
+}
+@media only screen and (min-width: 1250px) {
+    .nav-wrapper {
+        padding: 5rem 10rem;
+    }
+    section {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
 }
