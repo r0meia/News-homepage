@@ -15,25 +15,35 @@ nav {
     padding: 2rem 1rem;
 }
 .nav-links {
+    display: none;
+}
+.nav-links.active {
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 65%;
     position: fixed;
     right: 0;
     height: 832px;
+    box-shadow: -160px 0px 0px 0px rgba(0, 0, 26, 0.5);
+
+}
+.nav-links > a {
+    text-decoration: none;
+    margin: 2rem 0;
+    color: hsl(240, 100%, 5%);
+    font-size: 1.25rem;
+    padding-left: 2rem;
 }
 .hamburger-menu.disabled {
     display: none;
 }
 .hamburger-menu-close {
-    display: none;
-}
-.hamburger-menu-close.active {
     display: block;
     position: absolute;
     right: 1.25rem;
+    top: 2.5rem;
 }
 section {
     padding: 0 1rem;
@@ -71,7 +81,7 @@ section {
 .read-more:hover {
     background-color: hsl(240, 100%, 5%);
 }
-.new {
+#new {
     margin-top: 4rem;
     background-color: hsl(240, 100%, 5%);
 }
